@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+header {
+    grid-column: 2 / span 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+aside {
+    background-color: rgb(64, 94, 214);
+    grid-row: 1 / -1;
+}
+
+main {
+    background-color: rgb(218, 218, 255);
+}
+
