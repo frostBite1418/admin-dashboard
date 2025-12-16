@@ -13,15 +13,17 @@ body {
     font-family: "Roboto", sans-serif;
 
     display: grid;
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 8fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 6fr;
     gap: 1px;
 }
 
 header {
     grid-column: 2 / span 1;
     box-shadow: 0 4px 6px rgba(1, 0, 0, 0.2);
-    padding: 20px;
+
+    display: grid;
+    grid-template-rows: 0.3fr 0.6fr;
 }
 
 .header-top,
@@ -32,12 +34,89 @@ header {
 }
 
 .header-top-left,
-.header-top-right,
-.header-bottom-left,
 .header-bottom-right {
-    display: grid;
-    grid-auto-flow: column;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-top-left {
+    margin: 5px 50px;
+}
+
+.header-top-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+}
+
+.header-bottom-left {
+    display: flex;
+    margin-left: 50px;
+}
+
+.circular-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.circular-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header-bottom-left .circular-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.header-bottom-left span {
+    margin: 10px;
+}
+
+.header-bottom-left h4 {
+    margin: 0;
+    font-size: 25px
+}
+
+header input[type="text"] {
+    flex: 1;
+    height: 10px;
+    background-color: rgb(233, 237, 255);
+    border: 0;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+header input[type="text"]:focus {
+    outline: none;
+    border: 1px solid rgba(17, 17, 255, 0.3);
+} 
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+button{
+    width: 80px;
+    padding: 10px 20px;
+    background-color: rgb(64, 94, 214);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: 550;
+    text-align: center;
+    cursor: pointer;
 }
 
 aside {
@@ -63,7 +142,7 @@ main {
 
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3.5fr 1fr;
 }
 
 main span {
@@ -72,8 +151,8 @@ main span {
 
 .main-content-left {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
 }
 
